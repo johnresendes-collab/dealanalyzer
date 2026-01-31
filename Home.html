@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Analyzer Pro</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;color:#333}
+.hero{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:3em;margin:0 0 20px}
+.hero p{font-size:1.3em;margin:10px 0;opacity:.95}
+.btn{display:inline-block;background:#f59e0b;color:#fff;padding:16px 40px;text-decoration:none;border-radius:8px;font-weight:700;margin-top:25px}
+.btn:hover{background:#d97706}
+.container{max-width:1200px;margin:0 auto;padding:80px 20px}
+h2{text-align:center;font-size:2.5em;color:#1e40af;margin-bottom:50px}
+.packages{display:flex;gap:30px;flex-wrap:wrap;justify-content:center}
+.package{border:2px solid #ddd;border-radius:12px;padding:40px;width:300px;text-align:center;background:#fff}
+.package:hover{border-color:#3b82f6;box-shadow:0 8px 20px rgba(59,130,246,.15);transform:translateY(-5px)}
+.featured{border-color:#3b82f6!important;border-width:3px!important}
+.badge{background:#3b82f6;color:#fff;padding:8px 20px;border-radius:20px;font-size:.85em;margin-bottom:15px;display:inline-block}
+.package h3{font-size:1.8em;color:#1e40af;margin:0 0 15px}
+.price{font-size:2.8em;color:#1e40af;font-weight:700;margin:20px 0}
+.features{list-style:none;padding:0;margin:30px 0;text-align:left}
+.features li{padding:10px 0 10px 25px;border-bottom:1px solid #f3f4f6;position:relative}
+.features li:before{content:"✓";color:#10b981;font-weight:700;position:absolute;left:0}
+.contact{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;text-align:center;padding:80px 20px}
+.contact h2{color:#fff}
+.contact-box{background:rgba(255,255,255,.1);border-radius:12px;padding:40px;max-width:600px;margin:40px auto}
+.contact-box p{font-size:1.2em;margin:20px 0}
+.footer{background:#1f2937;color:#fff;text-align:center;padding:40px 20px}
+.gray-bg{background:#f9fafb}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;margin-top:50px}
+.card{background:#fff;padding:40px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.icon{font-size:3em;margin-bottom:20px}
+@media(max-width:768px){.hero h1{font-size:2em}.package{width:100%}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Deal Analyzer Pro</h1>
+<p>Professional Real Estate Investment Analysis in 24-48 Hours</p>
+<p style="font-size:1.1em">Stop wasting weeks researching deals. Get comprehensive due diligence reports.</p>
+<a href="#contact" class="btn">Get Your Deal Analyzed</a>
+</div>
+<div class="container">
+<h2>Choose Your Package</h2>
+<p style="text-align:center;font-size:1.2em;color:#6b7280;margin-bottom:20px">Professional analysis at every investment stage</p>
+<div class="packages">
+<div class="package">
+<h3>Quick Look</h3>
+<div class="price">$297</div>
+<p style="color:#6b7280;margin-bottom:30px">Perfect for initial screening</p>
+<ul class="features">
+<li>Property background check</li>
+<li>Neighborhood analysis</li>
+<li>Comparable sales review</li>
+<li>Major red flags identification</li>
+<li>Market trends snapshot</li>
+<li>5-page executive summary</li>
+<li><strong>24-48 hour delivery</strong></li>
+</ul>
+<a href="#contact" class="btn">Get Started</a>
+</div>
+<div class="package featured">
+<span class="badge">MOST POPULAR</span>
+<h3>Deep Dive</h3>
+<div class="price">$897</div>
+<p style="color:#6b7280;margin-bottom:30px">Comprehensive due diligence</p>
+<ul class="features">
+<li>Everything in Quick Look, plus:</li>
+<li>Detailed financial analysis</li>
+<li>Rental market assessment</li>
+<li>Neighborhood demographics</li>
+<li>Growth opportunity analysis</li>
+<li>Risk assessment matrix</li>
+<li>Exit strategy recommendations</li>
+<li>Investment return projections</li>
+<li>15-20 page professional report</li>
+<li><strong>3-5 day delivery</strong></li>
+</ul>
+<a href="#contact" class="btn">Get Started</a>
+</div>
+<div class="package">
+<h3>Investment Package</h3>
+<div class="price">$2,497</div>
+<p style="color:#6b7280;margin-bottom:30px">Complete investment package</p>
+<ul class="features">
+<li>Everything in Deep Dive, plus:</li>
+<li>Multiple scenario modeling</li>
+<li>Competitive property comparison</li>
+<li>Strategic recommendations</li>
+<li>Renovation/improvement analysis</li>
+<li>Property management insights</li>
+<li>Executive presentation deck</li>
+<li>Partner/investor ready materials</li>
+<li>One revision round included</li>
+<li><strong>7-10 day delivery</strong></li>
+</ul>
+<a href="#contact" class="btn">Get Started</a>
+</div>
+</div>
+</div>
+<div class="container gray-bg" style="padding:80px 20px">
+<h2>What You'll Receive</h2>
+<div class="grid">
+<div class="card">
+<div class="icon">📊</div>
+<h3 style="color:#1e40af;font-size:1.5em;margin-bottom:15px">Market Analysis</h3>
+<p style="color:#4b5563">Current market conditions, historical trends, and future outlook.</p>
+</div>
+<div class="card">
+<div class="icon">💰</div>
+<h3 style="color:#1e40af;font-size:1.5em;margin-bottom:15px">Financial Modeling</h3>
+<p style="color:#4b5563">Detailed cash flow projections, ROI calculations, and break-even analysis.</p>
+</div>
+<div class="card">
+<div class="icon">⚠️</div>
+<h3 style="color:#1e40af;font-size:1.5em;margin-bottom:15px">Risk Assessment</h3>
+<p style="color:#4b5563">Identified red flags and mitigation strategies to protect your investment.</p>
+</div>
+</div>
+</div>
+<div class="contact" id="contact">
+<h2>Ready to Analyze Your Next Deal?</h2>
+<p style="font-size:1.3em;margin:15px 0">Get your comprehensive analysis within days, not weeks.</p>
+<div class="contact-box">
+<p><strong>📧 Email:</strong> johnresendes@gmail.com</p>
+<p><strong>📱 Phone:</strong> (919) 302-3239</p>
+<p style="margin-top:30px;font-size:1em;opacity:.9">We'll respond within 4 business hours.</p>
+</div>
+</div>
+<div class="footer">
+<p>&copy; 2026 Deal Analyzer Pro. All rights reserved.</p>
+<p style="margin-top:10px">Professional real estate investment analysis and due diligence services.</p>
+</div>
+</body>
+</html>
