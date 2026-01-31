@@ -1,104 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deal Analyzer Pro</title>
+<title>Deal Analyzer Pro - Real Estate Investment Analysis</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;padding:0;color:#333;line-height:1.6}
-.header{background:#1e40af;color:white;text-align:center;padding:60px 20px}
-.header h1{font-size:2.5em;margin:0 0 10px}
-.header p{font-size:1.2em;margin:10px 0}
-.button{display:inline-block;background:#f59e0b;color:white;padding:15px 30px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:20px}
-.button:hover{background:#d97706}
-.section{max-width:1200px;margin:0 auto;padding:60px 20px}
-.section h2{text-align:center;font-size:2em;color:#1e40af;margin-bottom:40px}
-.packages{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;margin-top:40px}
-.package{border:2px solid #ddd;border-radius:10px;padding:30px;width:280px;text-align:center;background:white}
-.package:hover{border-color:#1e40af;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.package h3{font-size:1.8em;color:#1e40af;margin:0 0 10px}
-.price{font-size:2.5em;color:#1e40af;font-weight:bold;margin:20px 0}
-.features{list-style:none;padding:0;margin:20px 0;text-align:left}
-.features li{padding:8px 0;border-bottom:1px solid #eee}
-.features li:before{content:"✓ ";color:#10b981;font-weight:bold}
-.contact{background:#f9fafb;text-align:center}
-.contact p{font-size:1.2em;margin:20px 0}
-.footer{background:#1f2937;color:white;text-align:center;padding:30px 20px}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+.header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; text-align: center; padding: 80px 20px; }
+.header h1 { font-size: 3em; margin-bottom: 15px; font-weight: 700; }
+.header p { font-size: 1.3em; margin-bottom: 15px; opacity: 0.95; }
+.button { display: inline-block; background: #f59e0b; color: white; padding: 16px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 25px; font-size: 1.1em; transition: all 0.3s ease; }
+.button:hover { background: #d97706; transform: translateY(-2px); }
+.section { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+.section h2 { text-align: center; font-size: 2.5em; color: #1e40af; margin-bottom: 50px; font-weight: 700; }
+.packages { display: flex; gap: 35px; flex-wrap: wrap; justify-content: center; margin-top: 50px; }
+.package { border: 2px solid #e5e7eb; border-radius: 12px; padding: 40px; width: 320px; text-align: center; background: white; transition: all 0.3s ease; position: relative; }
+.package:hover { border-color: #3b82f6; box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15); transform: translateY(-5px); }
+.package.featured { border-color: #3b82f6; border-width: 3px; box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15); }
+.badge { background: #3b82f6; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.85em; font-weight: 700; display: inline-block; margin-bottom: 20px; letter-spacing: 0.5px; }
+.package h3 { font-size: 1.9em; color: #1e40af; margin-bottom: 15px; font-weight: 700; }
+.price { font-size: 3em; color: #1e40af; font-weight: 700; margin: 25px 0; }
+.price-subtext { color: #6b7280; font-size: 1em; margin-bottom: 30px; }
+.features { list-style: none; padding: 0; margin: 30px 0; text-align: left; }
+.features li { padding: 12px 0 12px 28px; border-bottom: 1px solid #f3f4f6; position: relative; font-size: 0.95em; }
+.features li:before { content: "✓"; color: #10b981; font-weight: bold; position: absolute; left: 0; font-size: 1.3em; }
+.features li:last-child { border-bottom: none; }
+.contact-section { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; text-align: center; padding: 80px 20px; }
+.contact-section h2 { color: white; font-size: 2.5em; margin-bottom: 30px; }
+.contact-section p { font-size: 1.3em; margin: 15px 0; opacity: 0.95; }
+.contact-info { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 40px; max-width: 600px; margin: 40px auto; border: 1px solid rgba(255, 255, 255, 0.2); }
+.contact-info p { font-size: 1.2em; margin: 20px 0; }
+.footer { background: #1f2937; color: white; text-align: center; padding: 40px 20px; }
+.footer p { opacity: 0.8; margin: 10px 0; }
+@media (max-width: 768px) {
+    .header h1 { font-size: 2em; }
+    .header p { font-size: 1.1em; }
+    .package { width: 100%; max-width: 350px; }
+    .price { font-size: 2.5em; }
+}
 </style>
 </head>
 <body>
+
 <div class="header">
-<h1>Deal Analyzer Pro</h1>
-<p>Professional Real Estate Investment Analysis in 24-48 Hours</p>
-<p>Stop wasting weeks researching deals. Get comprehensive due diligence reports.</p>
-<a href="#contact" class="button">Get Your Deal Analyzed</a>
+    <h1>Deal Analyzer Pro</h1>
+    <p>Professional Real Estate Investment Analysis in 24-48 Hours</p>
+    <p style="font-size: 1.15em;">Stop wasting weeks researching deals. Get comprehensive due diligence reports that help you invest with confidence.</p>
+    <a href="#contact" class="button">Get Your Deal Analyzed</a>
 </div>
 
 <div class="section">
-<h2>Choose Your Package</h2>
-<div class="packages">
-<div class="package">
-<h3>Quick Look</h3>
-<div class="price">$297</div>
-<p>Perfect for initial screening</p>
-<ul class="features">
-<li>Property background check</li>
-<li>Neighborhood analysis</li>
-<li>Comparable sales review</li>
-<li>Major red flags identification</li>
-<li>5-page executive summary</li>
-<li><strong>24-48 hour delivery</strong></li>
-</ul>
-<a href="#contact" class="button">Get Started</a>
+    <h2>Choose Your Package</h2>
+    <p style="text-align: center; font-size: 1.2em; color: #6b7280; margin-bottom: 20px;">Professional analysis at every investment stage</p>
+    
+    <div class="packages">
+        <div class="package">
+            <h3>Quick Look</h3>
+            <div class="price">$297</div>
+            <p class="price-subtext">Perfect for initial screening</p>
+            <ul class="features">
+                <li>Property background check</li>
+                <li>Neighborhood analysis</li>
+                <li>Comparable sales review</li>
+                <li>Major red flags identification</li>
+                <li>Market trends snapshot</li>
+                <li>5-page executive summary</li>
+                <li><strong>24-48 hour delivery</strong></li>
+            </ul>
+            <a href="#contact" class="button">Get Started</a>
+        </div>
+
+        <div class="package featured">
+            <span class="badge">MOST POPULAR</span>
+            <h3>Deep Dive</h3>
+            <div class="price">$897</div>
+            <p class="price-subtext">Comprehensive due diligence</p>
+            <ul class="features">
+                <li>Everything in Quick Look, plus:</li>
+                <li>Detailed financial analysis</li>
+                <li>Rental market assessment</li>
+                <li>Neighborhood demographics</li>
+                <li>Growth opportunity analysis</li>
+                <li>Risk assessment matrix</li>
+                <li>Exit strategy recommendations</li>
+                <li>Investment return projections</li>
+                <li>15-20 page professional report</li>
+                <li><strong>3-5 day delivery</strong></li>
+            </ul>
+            <a href="#contact" class="button">Get Started</a>
+        </div>
+
+        <div class="package">
+            <h3>Investment Package</h3>
+            <div class="price">$2,497</div>
+            <p class="price-subtext">Complete investment package</p>
+            <ul class="features">
+                <li>Everything in Deep Dive, plus:</li>
+                <li>Multiple scenario modeling</li>
+                <li>Competitive property comparison</li>
+                <li>Strategic recommendations</li>
+                <li>Renovation/improvement analysis</li>
+                <li>Property management insights</li>
+                <li>Executive presentation deck</li>
+                <li>Partner/investor ready materials</li>
+                <li>One revision round included</li>
+                <li><strong>7-10 day delivery</strong></li>
+            </ul>
+            <a href="#contact" class="button">Get Started</a>
+        </div>
+    </div>
 </div>
 
-<div class="package" style="border-color:#1e40af;border-width:3px">
-<div style="background:#1e40af;color:white;padding:5px;margin:-30px -30px 15px;border-radius:8px 8px 0 0">MOST POPULAR</div>
-<h3>Deep Dive</h3>
-<div class="price">$897</div>
-<p>Comprehensive due diligence</p>
-<ul class="features">
-<li>Everything in Quick Look</li>
-<li>Detailed financial analysis</li>
-<li>Rental market assessment</li>
-<li>Growth opportunity analysis</li>
-<li>Risk assessment matrix</li>
-<li>Investment projections</li>
-<li>15-20 page report</li>
-<li><strong>3-5 day delivery</strong></li>
-</ul>
-<a href="#contact" class="button">Get Started</a>
+<div class="section" style="background: #f9fafb;">
+    <h2>What You'll Receive</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px;">
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <div style="font-size: 3em; margin-bottom: 20px;">📊</div>
+            <h3 style="color: #1e40af; font-size: 1.5em; margin-bottom: 15px;">Market Analysis</h3>
+            <p style="color: #4b5563;">Current market conditions, historical trends, and future outlook for the specific area and property type.</p>
+        </div>
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <div style="font-size: 3em; margin-bottom: 20px;">💰</div>
+            <h3 style="color: #1e40af; font-size: 1.5em; margin-bottom: 15px;">Financial Modeling</h3>
+            <p style="color: #4b5563;">Detailed cash flow projections, ROI calculations, and break-even analysis tailored to your investment strategy.</p>
+        </div>
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <div style="font-size: 3em; margin-bottom: 20px;">⚠️</div>
+            <h3 style="color: #1e40af; font-size: 1.5em; margin-bottom: 15px;">Risk Assessment</h3>
+            <p style="color: #4b5563;">Identified red flags, potential challenges, and mitigation strategies to protect your investment.</p>
+        </div>
+    </div>
 </div>
 
-<div class="package">
-<h3>Investment Package</h3>
-<div class="price">$2,497</div>
-<p>Complete investment package</p>
-<ul class="features">
-<li>Everything in Deep Dive</li>
-<li>Multiple scenario modeling</li>
-<li>Competitive comparison</li>
-<li>Strategic recommendations</li>
-<li>Executive presentation deck</li>
-<li>Partner-ready materials</li>
-<li>One revision round</li>
-<li><strong>7-10 day delivery</strong></li>
-</ul>
-<a href="#contact" class="button">Get Started</a>
-</div>
-</div>
-</div>
-
-<div class="section contact" id="contact">
-<h2>Ready to Analyze Your Next Deal?</h2>
-<p>Email: johnresendes@gmail.com</p>
-<p>Phone: (919) 302-3239</p>
-<p style="margin-top:30px">We'll respond within 4 business hours to discuss your project.</p>
+<div class="contact-section" id="contact">
+    <h2>Ready to Analyze Your Next Deal?</h2>
+    <p>Get your comprehensive analysis within days, not weeks.</p>
+    
+    <div class="contact-info">
+        <p><strong>📧 Email:</strong> johnresendes@gmail.com</p>
+        <p><strong>📱 Phone:</strong> (919) 302-3239</p>
+        <p style="margin-top: 30px; font-size: 1em; opacity: 0.9;">We'll respond within 4 business hours to discuss your project and next steps.</p>
+    </div>
 </div>
 
 <div class="footer">
-<p>&copy; 2026 Deal Analyzer Pro. All rights reserved.</p>
-<p>Professional real estate investment analysis and due diligence services.</p>
+    <p>&copy; 2026 Deal Analyzer Pro. All rights reserved.</p>
+    <p style="margin-top: 10px;">Professional real estate investment analysis and due diligence services.</p>
 </div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+</script>
+
 </body>
 </html>
